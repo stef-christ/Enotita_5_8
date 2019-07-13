@@ -2,19 +2,24 @@ package com.example.enotita_4_7;
 
 public class Recipe {
 
+    private int id;
     private String recTitle;
     private String recDescription;
-    private int imgid;
+    private String Img;
 
     public Recipe() {
 
     }
 
-    public Recipe(String recTitle, String recDescription, int imgid) {
+    public Recipe(String recTitle, String recDescription, String Img) {
         this.recTitle = recTitle;
         this.recDescription = recDescription;
-        this.imgid = imgid;
+        this.Img = Img;
     }
+
+    public int getId() {return id;}
+
+    public void setId(int id) {this.id = id;}
 
     public String getRecTitle() {
         return recTitle;
@@ -32,11 +37,8 @@ public class Recipe {
         this.recDescription = recDescription;
     }
 
-    public int getImgid() {
-        return imgid;
-    }
+    public String getImg() {return Img;}
 
-    public void setImgid(int imgid) {
-        this.imgid = imgid;
-    }
+    public void setImg(String img) {this.Img = img;}
+
 }
