@@ -41,15 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 TextView txtVw_id = view.findViewById(R.id.txtVw_id);
                 TextView txtVw_recTitle = view.findViewById(R.id.txtVw_recTitle);
                 TextView txtVwDesc = view.findViewById(R.id.txtVw_recDescription);
-                ImageView img = view.findViewById(R.id.imageView);
-                //img.buildDrawingCache();
-                //Bitmap bitmap = img.getDrawingCache();
 
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("title", txtVw_recTitle.getText().toString());
                 intent.putExtra("description", recipes.get(position).getRecDescription());
                 intent.putExtra("id", txtVw_id.getText().toString());
-                //intent.putExtra("image", bitmap);
 
                 startActivity(intent);
             }
